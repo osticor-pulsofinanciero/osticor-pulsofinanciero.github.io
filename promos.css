@@ -1,0 +1,210 @@
+/* ============================================================================
+   PROMOS.CSS - Estilos para la sección de Productos (Covers y Videos)
+   ============================================================================ */
+
+/* --- Contenedores de Producto --- */
+.product-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 60px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+}
+
+@media (min-width: 900px) {
+    .product-showcase {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .product-showcase.reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+.product-info-panel {
+    flex: 1;
+}
+
+/* --- Cartas de Presentación (Covers) --- */
+.covers-carousel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 0 20px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--dorado) rgba(0,0,0,0.2);
+}
+
+.covers-carousel::-webkit-scrollbar {
+    height: 6px;
+}
+.covers-carousel::-webkit-scrollbar-thumb {
+    background: var(--dorado);
+    border-radius: 4px;
+}
+
+.promo-cover {
+    flex: 0 0 160px;
+    height: 280px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    scroll-snap-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 15px;
+    transition: transform 0.3s;
+}
+
+.promo-cover:hover {
+    transform: translateY(-5px);
+}
+
+/* Colores específicos de los covers */
+.cover-ostikec-1 { background: linear-gradient(160deg, #16324f, #0d2033); }
+.cover-ostikec-2 { background: linear-gradient(160deg, #06121f, #16324f); border: 1px solid rgba(242, 169, 0, 0.3); }
+.cover-kontafin-1 { background: linear-gradient(160deg, #0d1f33, #2a5280); }
+.cover-kontafin-2 { background: linear-gradient(160deg, #16324f, #0d1f33); border: 1px solid rgba(46, 125, 50, 0.4); }
+
+.promo-cover h4 { color: #fff; font-size: 1.1rem; margin-bottom: 5px; line-height: 1.2; }
+.promo-cover p { color: #a8c0d8; font-size: 0.75rem; }
+.promo-cover .cover-icon { font-size: 35px; margin-bottom: 15px; }
+.promo-cover .cover-badge {
+    background: var(--dorado); color: var(--azul-oscuro);
+    padding: 3px 10px; border-radius: 10px; font-size: 0.6rem;
+    font-weight: 800; text-transform: uppercase; margin-bottom: 10px;
+}
+
+/* --- Reproductor de Video Vertical (9:16) --- */
+.vertical-video-wrapper {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.video-player-vertical {
+    width: 100%;
+    max-width: 280px; /* Ancho máximo para que quepa en pantalla */
+    aspect-ratio: 9 / 16;
+    background: #000;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 0 2px rgba(255,255,255,0.1);
+}
+
+.v-stage {
+    position: absolute;
+    inset: 0;
+}
+
+.v-scene {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 20px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.v-scene.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Animaciones internas de las escenas */
+.v-anim-up { transform: translateY(20px); opacity: 0; transition: all 0.6s ease 0.2s; }
+.v-scene.active .v-anim-up { transform: translateY(0); opacity: 1; }
+
+/* Escenas OSTIKEC */
+.v-ostikec-1 { background: radial-gradient(circle at center, #16324f, #0a1520); }
+.v-ostikec-2 { background: radial-gradient(circle at center, #0d2033, #06121f); }
+.v-ostikec-3 { background: radial-gradient(circle at center, #16324f, #0a1520); }
+
+/* Escenas KontaFin */
+.v-kontafin-1 { background: radial-gradient(circle at center, #2a5280, #0d1f33); }
+.v-kontafin-2 { background: radial-gradient(circle at center, #0d1f33, #0a1520); }
+
+.v-scene h3 { color: #fff; font-size: 1.4rem; margin-bottom: 10px; line-height: 1.2; }
+.v-scene p { color: #9db4cc; font-size: 0.85rem; }
+.v-scene .v-highlight { color: var(--dorado); }
+.v-scene .v-icon-big { font-size: 60px; margin-bottom: 20px; }
+
+/* Mockups dentro del video */
+.v-mockup-ticket {
+    background: #fff; border-radius: 8px; padding: 12px; width: 90%; margin-top: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+.v-mockup-ticket .m-title { font-weight: 800; color: var(--azul-medio); font-size: 0.8rem; margin-bottom: 5px; text-align: left; }
+.v-mockup-ticket .m-qr {
+    width: 60px; height: 60px; margin: 0 auto; background: repeating-conic-gradient(#1f2937 0% 25%, #fff 0% 50%) 50% / 8px 8px;
+    border: 2px solid #fff; box-shadow: 0 0 0 1px #cbd5e1;
+}
+.v-mockup-chart {
+    width: 90%; height: 80px; display: flex; align-items: flex-end; justify-content: space-around; margin-top: 15px; border-bottom: 2px solid #475569; padding-bottom: 5px;
+}
+.v-mockup-chart span { width: 12%; background: var(--dorado); border-radius: 3px 3px 0 0; }
+.v-mockup-chart span:nth-child(2) { height: 40%; background: #2e7d32; }
+.v-mockup-chart span:nth-child(3) { height: 70%; background: var(--dorado); }
+.v-mockup-chart span:nth-child(4) { height: 55%; background: #2e7d32; }
+.v-mockup-chart span:nth-child(5) { height: 90%; background: var(--dorado); }
+
+/* Controles del video */
+.v-controls {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 10px; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    display: flex; align-items: center; gap: 10px;
+    opacity: 0; transition: opacity 0.3s;
+}
+.video-player-vertical:hover .v-controls { opacity: 1; }
+.v-btn {
+    background: transparent; border: none; color: #fff; font-size: 16px; cursor: pointer;
+}
+.v-progress { flex: 1; height: 4px; background: rgba(255,255,255,0.2); border-radius: 2px; cursor: pointer; position: relative; }
+.v-progress-fill { height: 100%; background: var(--dorado); border-radius: 2px; width: 0%; }
+
+.v-play-overlay {
+    position: absolute; inset: 0; background: rgba(0,0,0,0.4);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; z-index: 10; transition: opacity 0.3s;
+}
+.v-play-overlay.hidden { opacity: 0; pointer-events: none; }
+.v-play-btn {
+    width: 50px; height: 50px; border-radius: 50%; background: var(--dorado);
+    border: none; font-size: 20px; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 20px rgba(242, 169, 0, 0.5); padding-left: 4px; cursor: pointer;
+}
+
+/* --- Fondos Decorados (Colores en secciones blancas) --- */
+.decorated-section {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.decor-circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.15;
+}
+
+.circle-1 { width: 400px; height: 400px; background: var(--dorado); top: -100px; right: -100px; }
+.circle-2 { width: 300px; height: 300px; background: var(--azul-claro); bottom: -50px; left: -50px; }
+.circle-3 { width: 350px; height: 350px; background: #2e7d32; top: 50%; left: 10%; opacity: 0.1; }
