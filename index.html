@@ -6,7 +6,7 @@
     <title>OSTICOR Pulso Financiero | Soluciones Tecnológicas y Contables</title>
     <meta name="description" content="Desarrollamos aplicaciones Android, sitios web y brindamos asesoría contable y financiera para hacer crecer tu empresa.">
     <link rel="stylesheet" href="style.css">
-    <!-- Fuente de Google para un diseño moderno -->
+    <link rel="stylesheet" href="promos.css"> <!-- NUEVO CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -109,40 +109,158 @@
     <section id="productos" class="section bg-dark">
         <div class="container">
             <div class="section-header reveal text-white">
-                <h2>Nuestros Productos Principales</h2>
+                <h2>Nuestras Aplicaciones</h2>
                 <div class="separator"></div>
-                <p>Descubre las aplicaciones que están transformando la gestión de negocios.</p>
+                <p>Conoce el poder de nuestras herramientas diseñadas para transformar tu negocio.</p>
             </div>
 
-            <div class="grid-2">
-                <!-- Producto 1: OSTIKEC -->
-                <div class="card product-card reveal">
-                    <div class="product-badge">Seguridad y Control</div>
-                    <h3>OSTIKEC</h3>
-                    <p class="product-desc">Sistema profesional de generación y validación de tickets con códigos QR dinámicos. Ideal para eventos, comercios y servicios.</p>
-                    <ul class="product-features">
-                        <li>✅ Generación de tickets sin internet</li>
-                        <li>✅ Validación de autenticidad con firma digital</li>
-                        <li>✅ Control de fechas y validación en tiempo real</li>
-                        <li>✅ Gestión de negocios y estadísticas</li>
-                        <li>✅ Protección contra fraudes y falsificaciones</li>
-                    </ul>
+            <!-- OSTIKEC SHOWCASE -->
+            <div class="product-showcase reveal">
+                <div class="product-info-panel">
+                    <div class="product-badge" style="display:inline-block; margin-bottom:15px; background:var(--dorado); color:var(--azul-oscuro); padding:5px 15px; border-radius:20px; font-weight:800; font-size:0.8rem;">SEGURIDAD Y CONTROL</div>
+                    <h3 style="font-size: 2.5rem; color: #fff; margin-bottom: 15px;">OSTIKEC</h3>
+                    <p class="product-desc" style="color: #a8c0d8; font-size: 1.1rem; margin-bottom: 20px;">Sistema profesional de generación y validación de tickets con códigos QR dinámicos. Ideal para eventos, comercios y servicios.</p>
+                    
+                    <!-- Carrusel de Covers OSTIKEC -->
+                    <div class="covers-carousel">
+                        <div class="promo-cover cover-ostikec-1">
+                            <div class="cover-icon">🎫</div>
+                            <h4>Confianza Total</h4>
+                            <p>QR Verificable</p>
+                        </div>
+                        <div class="promo-cover cover-ostikec-2">
+                            <div class="cover-badge">SEGURIDAD</div>
+                            <div class="cover-icon">🛡️</div>
+                            <h4>Firma SHA-256</h4>
+                            <p>Imposible falsificar</p>
+                        </div>
+                        <div class="promo-cover cover-ostikec-1">
+                            <div class="cover-badge">MULTI-NEGOCIO</div>
+                            <div class="cover-icon">🏢</div>
+                            <h4>Varios Negocios</h4>
+                            <p>En un solo teléfono</p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Producto 2: KontaFin -->
-                <div class="card product-card reveal">
-                    <div class="product-badge">Contabilidad Inteligente</div>
-                    <h3>KontaFin</h3>
-                    <p class="product-desc">El asistente de gestión para negocios. Controla tu inventario, ventas, compras, gastos y finanzas desde un solo lugar.</p>
-                    <ul class="product-features">
-                        <li>✅ Control de inventario y alertas de stock</li>
-                        <li>✅ Registro de ventas (efectivo y fiado) y compras</li>
-                        <li>✅ Estado de resultados y balance general</li>
-                        <li>✅ Análisis de costos y punto de equilibrio</li>
-                        <li>✅ Exportación de reportes a PDF y Excel</li>
-                    </ul>
+                <!-- Video Vertical OSTIKEC -->
+                <div class="vertical-video-wrapper">
+                    <div class="video-player-vertical" id="videoOstikec">
+                        <div class="v-stage">
+                            <!-- Escena 1 -->
+                            <div class="v-scene v-ostikec-1 active">
+                                <div class="v-anim-up">
+                                    <div class="v-icon-big">🎫</div>
+                                    <h3>¿Tus clientes <span class="v-highlight">confían</span> en tu comprobante?</h3>
+                                    <p>OSTIKEC genera tickets con QR verificable.</p>
+                                </div>
+                            </div>
+                            <!-- Escena 2 -->
+                            <div class="v-scene v-ostikec-2">
+                                <div class="v-anim-up">
+                                    <div class="v-icon-big">🔒</div>
+                                    <h3>Seguridad Absoluta</h3>
+                                    <p>Firma digital SHA-256 imposible de alterar.</p>
+                                    <div class="v-mockup-ticket">
+                                        <div class="m-title">TICKET VÁLIDO</div>
+                                        <div class="m-qr"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Escena 3 -->
+                            <div class="v-scene v-ostikec-3">
+                                <div class="v-anim-up">
+                                    <div class="v-icon-big">📵</div>
+                                    <h3>Funciona <span class="v-highlight">sin internet</span></h3>
+                                    <p>Todo sucede dentro del teléfono. No necesita servidores.</p>
+                                    <div style="margin-top: 20px; font-size: 30px;">📱✅</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="v-play-overlay">
+                            <button class="v-play-btn">▶</button>
+                        </div>
+                        <div class="v-controls">
+                            <button class="v-btn v-btn-play">▶</button>
+                            <div class="v-progress"><div class="v-progress-fill"></div></div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- KONTAFIN SHOWCASE -->
+            <div class="product-showcase reverse reveal">
+                <div class="product-info-panel">
+                    <div class="product-badge" style="display:inline-block; margin-bottom:15px; background:#2e7d32; color:#fff; padding:5px 15px; border-radius:20px; font-weight:800; font-size:0.8rem;">CONTABILIDAD INTELIGENTE</div>
+                    <h3 style="font-size: 2.5rem; color: #fff; margin-bottom: 15px;">KontaFin</h3>
+                    <p class="product-desc" style="color: #a8c0d8; font-size: 1.1rem; margin-bottom: 20px;">El asistente de gestión para negocios. Controla tu inventario, ventas, compras, gastos y finanzas desde un solo lugar.</p>
+                    
+                    <!-- Carrusel de Covers KontaFin -->
+                    <div class="covers-carousel">
+                        <div class="promo-cover cover-kontafin-1">
+                            <div class="cover-icon">📊</div>
+                            <h4>Control Total</h4>
+                            <p>Ventas e Inventario</p>
+                        </div>
+                        <div class="promo-cover cover-kontafin-2">
+                            <div class="cover-badge">BALANCE</div>
+                            <div class="cover-icon">⚖️</div>
+                            <h4>Estado de Resultados</h4>
+                            <p>Finanzas claras</p>
+                        </div>
+                        <div class="promo-cover cover-kontafin-1">
+                            <div class="cover-badge">ANÁLISIS</div>
+                            <div class="cover-icon">📈</div>
+                            <h4>Punto de Equilibrio</h4>
+                            <p>Decisiones rentables</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Vertical KONTAFIN -->
+                <div class="vertical-video-wrapper">
+                    <div class="video-player-vertical" id="videoKontaFin">
+                        <div class="v-stage">
+                            <!-- Escena 1 -->
+                            <div class="v-scene v-kontafin-1 active">
+                                <div class="v-anim-up">
+                                    <div class="v-icon-big">📦</div>
+                                    <h3>¿Sabes cuánto <span class="v-highlight">ganas</span> realmente?</h3>
+                                    <p>KontaFin te da el control absoluto de tu negocio.</p>
+                                </div>
+                            </div>
+                            <!-- Escena 2 -->
+                            <div class="v-scene v-kontafin-2">
+                                <div class="v-anim-up">
+                                    <div class="v-icon-big">📈</div>
+                                    <h3>Análisis Financiero</h3>
+                                    <p>Gráficos en tiempo real de tus ventas y gastos.</p>
+                                    <div class="v-mockup-chart">
+                                        <span></span><span></span><span></span><span></span><span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Escena 3 -->
+                            <div class="v-scene v-kontafin-1">
+                                <div class="v-anim-up">
+                                    <div class="v-icon-big">🚀</div>
+                                    <h3>Toma el <span class="v-highlight">Siguiente Paso</span></h3>
+                                    <p>Haz crecer tu empresa basándote en datos reales.</p>
+                                    <div style="margin-top: 20px; font-weight: bold; background: var(--dorado); color: var(--azul-oscuro); padding: 10px 20px; border-radius: 20px;">Descargar KontaFin</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="v-play-overlay">
+                            <button class="v-play-btn">▶</button>
+                        </div>
+                        <div class="v-controls">
+                            <button class="v-btn v-btn-play">▶</button>
+                            <div class="v-progress"><div class="v-progress-fill"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -188,5 +306,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="promos.js"></script> <!-- NUEVO JS -->
 </body>
 </html>
