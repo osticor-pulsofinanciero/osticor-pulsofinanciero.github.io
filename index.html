@@ -130,6 +130,124 @@
                 <p>Conoce el poder de nuestras herramientas diseñadas para transformar tu negocio.</p>
             </div>
 
+            Pulso Financiero
+We need answer in Spanish. User asks: "Quiero añadirlo donde aparece la descripción de OSTIKEC, dime dónde está ubicado ese bloque de código" They want know where is located the block of code where OSTIKEC description appears. But we don't have access to their site/code. Need explain cannot know exact location; guide how to find it. Need mention search in files for "OSTIKEC", "OSTIKEC" description, sections, index.html, etc. Provide steps for static site, WordPress, GitHub Pages. Tell them where to insert link near description: within same section, after paragraph. Need ask if they share code or file structure. Also note previous assistant didn't provide actual location; only example. So answer: no puedo saber ubicación exacta sin ver tu código; busca texto "OSTIKEC" en index.html, etc. Provide generic snippet to insert after description paragraph. Need be concise. Maybe include instructions: open repo, search "OSTIKEC", find section id, paste link after <p>...descripción...</p>. If WordPress, edit page block. If GitHub Pages, edit index.html. Also mention don't paste entire section if already exists; add anchor. Need mention if they want exact, paste fragment. Desired oververbosity 5. Final Spanish. Ensure answer addresses "dime dónde está ubicado ese bloque de código" — explain cannot determine remotely. Provide method. Could include code snippet with placeholder.
+
+No puedo decirte la ubicación exacta porque no tengo acceso al código de tu sitio ni a la estructura de archivos de OSTICOR Pulso Financiero. El bloque que te puse antes era un ejemplo genérico, no una parte real de tu web. Para saber dónde está la descripción de OSTIKEC, tienes que buscarla en tu propio proyecto.
+
+🔍 Cómo encontrar el bloque donde aparece la descripción de OSTIKEC
+Si tu sitio es estático en GitHub Pages (por la URL osticor-pulsofinanciero.github.io):
+
+Abre el repositorio en GitHub.
+
+Entra al archivo principal, normalmente index.html, o al archivo de la página donde esté OSTIKEC.
+
+Usa la búsqueda del navegador con Ctrl + F y busca: OSTIKEC, OSTIKEC o descripción.
+
+Verás algo parecido a:
+
+html
+<section id="ostikec">
+  <h2>OSTIKEC</h2>
+  <p>Aquí está la descripción de la aplicación...</p>
+</section>
+El enlace de descarga debe ir justo después de ese párrafo de descripción, dentro de la misma sección.
+
+Si usas WordPress u otro gestor:
+
+Entra al editor de la página donde aparece OSTIKEC.
+
+Busca el bloque de párrafo con la descripción.
+
+Añade debajo un bloque de HTML personalizado o un bloque de botón con la URL del APK.
+
+Si no encuentras el texto:
+
+Busca por el nombre del archivo APK: ostikec.apk.
+
+Busca por descarga, Android o aplicación.
+
+Revisa si la descripción está en un archivo distinto, por ejemplo ostikec.html, app.html o una sección dentro de index.html.
+
+📌 Dónde insertar el enlace exactamente
+Una vez localices el bloque de descripción, debes añadir el enlace dentro de esa misma sección, después del texto descriptivo. Por ejemplo, si encuentras esto:
+
+html
+<section id="ostikec">
+  <h2>OSTIKEC</h2>
+  <p>
+    OSTIKEC es la aplicación de OSTICOR Pulso Financiero para gestionar...
+  </p>
+</section>
+Debes dejarlo así:
+
+html
+<section id="ostikec">
+  <h2>OSTIKEC</h2>
+  <p>
+    OSTIKEC es la aplicación de OSTICOR Pulso Financiero para gestionar...
+  </p>
+
+  <a
+    class="btn-descarga"
+    href="https://osticor-pulsofinanciero.github.io/ostikec/ostikec.apk"
+    download="ostikec.apk"
+    type="application/vnd.android.package-archive"
+    rel="noopener"
+  >
+    Descargar OSTIKEC para Android
+  </a>
+</section>
+✅ Resumen
+No puedo saber la ubicación exacta sin ver tu código.
+
+Busca en tu index.html o en la página correspondiente el texto OSTIKEC.
+
+El enlace va justo debajo del párrafo que describe OSTIKEC, dentro de la misma sección.
+
+Si me pegas el fragmento de código donde aparece la descripción de OSTIKEC, te digo exactamente dónde insertar el enlace y cómo dejarlo bien integrado.
+
+Este es mi archivo index. Dime dónde ubico la opción de descarga
+The user wants to add the download link for OSTIKEC in the description block of OSTIKEC. Looking at the HTML, OSTIKEC's description is in the "product-showcase" div within the #productos section. There's a "product-desc" paragraph with the description, and then a "covers-carousel".
+
+The best placement would be right after the "product-desc" paragraph, before the carousel. Or after the carousel. Let me suggest right after the product-desc paragraph so it's visible with the description.
+
+Actually, let me think - the layout is: product-info-panel contains badge, h3, p (product-desc), and covers-carousel. Adding a download button right after the product-desc makes it prominent and associated with the description.
+
+I'll provide the exact code snippet showing where to insert. I should give the specific location within their existing code.
+
+Also, maybe add it in the video scene 3 of OSTIKEC where it says "Funciona sin internet" - no, better to keep it simple.
+
+Let me give clear instructions with the exact insertion point.
+
+En tu archivo index.html, la descripción de OSTIKEC está dentro de la sección #productos, en el bloque <div class="product-info-panel"> del primer product-showcase. El punto exacto donde debes insertar la opción de descarga es justo después del párrafo <p class="product-desc"> y antes del <div class="covers-carousel">, para que el botón quede visible junto a la descripción, antes del carrusel de portadas.
+
+📍 Ubicación exacta en tu código
+Busca este fragmento (está alrededor de la línea donde aparece OSTIKEC):
+
+html
+<h3 style="font-size: 2.5rem; color: #fff; margin-bottom: 15px;">OSTIKEC</h3>
+<p class="product-desc" style="color: #a8c0d8; font-size: 1.1rem; margin-bottom: 20px;">Sistema profesional de generación y validación de tickets con códigos QR dinámicos. Ideal para eventos, comercios y servicios.</p>
+
+<!-- Carrusel de Covers OSTIKEC -->
+<div class="covers-carousel">
+✅ Cómo debe quedar con el botón añadido
+html
+<h3 style="font-size: 2.5rem; color: #fff; margin-bottom: 15px;">OSTIKEC</h3>
+<p class="product-desc" style="color: #a8c0d8; font-size: 1.1rem; margin-bottom: 20px;">Sistema profesional de generación y validación de tickets con códigos QR dinámicos. Ideal para eventos, comercios y servicios.</p>
+
+<!-- BOTÓN DE DESCARGA OSTIKEC -->
+<a
+  class="btn-descarga"
+  href="https://osticor-pulsofinanciero.github.io/ostikec/ostikec.apk"
+  download="ostikec.apk"
+  type="application/vnd.android.package-archive"
+  rel="noopener"
+  style="display:inline-block; margin-bottom:20px; padding:12px 22px; background-color:var(--dorado); color:var(--azul-oscuro); text-decoration:none; border-radius:8px; font-weight:800;"
+>
+  ⬇️ Descargar OSTIKEC para Android
+</a>
+
             <!-- OSTIKEC SHOWCASE -->
             <div class="product-showcase reveal">
                 <div class="product-info-panel">
